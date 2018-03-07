@@ -1,0 +1,6 @@
+framework module Pods_bad_ink {
+  umbrella header "Pods-bad-ink-umbrella.h"
+
+  export *
+  module * { export * }
+}

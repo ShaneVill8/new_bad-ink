@@ -7,13 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE774C78204B2DAE00A1BD2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE774C77204B2DAE00A1BD2B /* AppDelegate.swift */; };
-		CE774C7A204B2DAE00A1BD2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE774C79204B2DAE00A1BD2B /* ViewController.swift */; };
+		297A2AB1B5A6AAEB36A53220 /* Pods_bad_inkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E15704D7A250ABD235F1E1 /* Pods_bad_inkTests.framework */; };
+		2D39198607FDD5AD02C7CF70 /* Pods_bad_ink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F478EC0DBF861D6DAD399C /* Pods_bad_ink.framework */; };
+		7A9B06F0C3E77749D78247B1 /* Pods_bad_inkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F314B7C322981422AC59C4 /* Pods_bad_inkUITests.framework */; };
+		CE473CD0204B4C48004F38EC /* newBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = CE473CCF204B4C48004F38EC /* newBackground.png */; };
+		CE473CDA204E40D4004F38EC /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE473CD9204E40D4004F38EC /* HomeTableViewController.swift */; };
+		CE473CDC204E40E6004F38EC /* TShirtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE473CDB204E40E6004F38EC /* TShirtTableViewController.swift */; };
+		CE473CDE204E40F3004F38EC /* OuterwearTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE473CDD204E40F3004F38EC /* OuterwearTableViewController.swift */; };
+		CE473CE0204E4111004F38EC /* AccessoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE473CDF204E4111004F38EC /* AccessoriesTableViewController.swift */; };
+		CE473CE2204E4133004F38EC /* ShoppingCartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE473CE1204E4133004F38EC /* ShoppingCartTableViewController.swift */; };
+		CE473CE4204E4A26004F38EC /* LogoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE473CE3204E4A26004F38EC /* LogoTableViewCell.swift */; };
+		CE473CE6204E51F9004F38EC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE473CE5204E51F9004F38EC /* LoginViewController.swift */; };
+		CE473D22204F25AE004F38EC /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE473D21204F25AE004F38EC /* CreateAccountViewController.swift */; };
+		CE4C7619204F5EC500F78149 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C7618204F5EC500F78149 /* AppDelegate.swift */; };
 		CE774C7D204B2DAE00A1BD2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE774C7B204B2DAE00A1BD2B /* Main.storyboard */; };
 		CE774C7F204B2DAE00A1BD2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE774C7E204B2DAE00A1BD2B /* Assets.xcassets */; };
 		CE774C82204B2DAE00A1BD2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE774C80204B2DAE00A1BD2B /* LaunchScreen.storyboard */; };
 		CE774C8D204B2DAE00A1BD2B /* bad_inkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE774C8C204B2DAE00A1BD2B /* bad_inkTests.swift */; };
 		CE774C98204B2DAE00A1BD2B /* bad_inkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE774C97204B2DAE00A1BD2B /* bad_inkUITests.swift */; };
+		CE774CB6204B359100A1BD2B /* cart.png in Resources */ = {isa = PBXBuildFile; fileRef = CE774CB5204B359100A1BD2B /* cart.png */; };
+		CE774CB8204B359400A1BD2B /* hat.png in Resources */ = {isa = PBXBuildFile; fileRef = CE774CB7204B359400A1BD2B /* hat.png */; };
+		CE774CBC204B359B00A1BD2B /* hoodie.png in Resources */ = {isa = PBXBuildFile; fileRef = CE774CBB204B359B00A1BD2B /* hoodie.png */; };
+		CE774CC0204B360C00A1BD2B /* home (4).png in Resources */ = {isa = PBXBuildFile; fileRef = CE774CBF204B360B00A1BD2B /* home (4).png */; };
+		CE774CC4204B36E400A1BD2B /* shape (1).png in Resources */ = {isa = PBXBuildFile; fileRef = CE774CC3204B36E400A1BD2B /* shape (1).png */; };
+		CE774CC6204B39B900A1BD2B /* bad-ink box black.png in Resources */ = {isa = PBXBuildFile; fileRef = CE774CC5204B39B800A1BD2B /* bad-ink box black.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +51,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12A2A01C20FCD3509AFF21E9 /* Pods-bad-inkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bad-inkUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bad-inkUITests/Pods-bad-inkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		19E15704D7A250ABD235F1E1 /* Pods_bad_inkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bad_inkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		223C92F371D20B32D94139AC /* Pods-bad-ink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bad-ink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bad-ink/Pods-bad-ink.debug.xcconfig"; sourceTree = "<group>"; };
+		27F478EC0DBF861D6DAD399C /* Pods_bad_ink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bad_ink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		343F4F8965B9EA195E5E055A /* Pods-bad-inkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bad-inkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bad-inkTests/Pods-bad-inkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		60BD7B8A8972680E9AB20AF4 /* Pods-bad-ink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bad-ink.release.xcconfig"; path = "Pods/Target Support Files/Pods-bad-ink/Pods-bad-ink.release.xcconfig"; sourceTree = "<group>"; };
+		72F314B7C322981422AC59C4 /* Pods_bad_inkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bad_inkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA7F19BD013D3804CA8AEF0F /* Pods-bad-inkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bad-inkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bad-inkTests/Pods-bad-inkTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE473CCF204B4C48004F38EC /* newBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newBackground.png; sourceTree = "<group>"; };
+		CE473CD9204E40D4004F38EC /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		CE473CDB204E40E6004F38EC /* TShirtTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TShirtTableViewController.swift; sourceTree = "<group>"; };
+		CE473CDD204E40F3004F38EC /* OuterwearTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuterwearTableViewController.swift; sourceTree = "<group>"; };
+		CE473CDF204E4111004F38EC /* AccessoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesTableViewController.swift; sourceTree = "<group>"; };
+		CE473CE1204E4133004F38EC /* ShoppingCartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTableViewController.swift; sourceTree = "<group>"; };
+		CE473CE3204E4A26004F38EC /* LogoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoTableViewCell.swift; sourceTree = "<group>"; };
+		CE473CE5204E51F9004F38EC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CE473D21204F25AE004F38EC /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		CE4C7618204F5EC500F78149 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE774C74204B2DAE00A1BD2B /* bad-ink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bad-ink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE774C77204B2DAE00A1BD2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE774C79204B2DAE00A1BD2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE774C7C204B2DAE00A1BD2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE774C7E204B2DAE00A1BD2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE774C81204B2DAE00A1BD2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +80,13 @@
 		CE774C93204B2DAE00A1BD2B /* bad-inkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bad-inkUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE774C97204B2DAE00A1BD2B /* bad_inkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bad_inkUITests.swift; sourceTree = "<group>"; };
 		CE774C99204B2DAE00A1BD2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE774CB5204B359100A1BD2B /* cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart.png; sourceTree = "<group>"; };
+		CE774CB7204B359400A1BD2B /* hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hat.png; sourceTree = "<group>"; };
+		CE774CBB204B359B00A1BD2B /* hoodie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoodie.png; sourceTree = "<group>"; };
+		CE774CBF204B360B00A1BD2B /* home (4).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home (4).png"; sourceTree = "<group>"; };
+		CE774CC3204B36E400A1BD2B /* shape (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shape (1).png"; sourceTree = "<group>"; };
+		CE774CC5204B39B800A1BD2B /* bad-ink box black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bad-ink box black.png"; sourceTree = "<group>"; };
+		FF3C8C4576396D26D4ADF61E /* Pods-bad-inkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bad-inkUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bad-inkUITests/Pods-bad-inkUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D39198607FDD5AD02C7CF70 /* Pods_bad_ink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				297A2AB1B5A6AAEB36A53220 /* Pods_bad_inkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +110,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9B06F0C3E77749D78247B1 /* Pods_bad_inkUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8EBDFDD92273EEEC5E472BFB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				223C92F371D20B32D94139AC /* Pods-bad-ink.debug.xcconfig */,
+				60BD7B8A8972680E9AB20AF4 /* Pods-bad-ink.release.xcconfig */,
+				343F4F8965B9EA195E5E055A /* Pods-bad-inkTests.debug.xcconfig */,
+				BA7F19BD013D3804CA8AEF0F /* Pods-bad-inkTests.release.xcconfig */,
+				FF3C8C4576396D26D4ADF61E /* Pods-bad-inkUITests.debug.xcconfig */,
+				12A2A01C20FCD3509AFF21E9 /* Pods-bad-inkUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CE774C6B204B2DAE00A1BD2B = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +137,8 @@
 				CE774C8B204B2DAE00A1BD2B /* bad-inkTests */,
 				CE774C96204B2DAE00A1BD2B /* bad-inkUITests */,
 				CE774C75204B2DAE00A1BD2B /* Products */,
+				8EBDFDD92273EEEC5E472BFB /* Pods */,
+				DCA8CB1EB4B6B00D71FEA704 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +155,26 @@
 		CE774C76204B2DAE00A1BD2B /* bad-ink */ = {
 			isa = PBXGroup;
 			children = (
-				CE774C77204B2DAE00A1BD2B /* AppDelegate.swift */,
-				CE774C79204B2DAE00A1BD2B /* ViewController.swift */,
 				CE774C7B204B2DAE00A1BD2B /* Main.storyboard */,
+				CE4C7618204F5EC500F78149 /* AppDelegate.swift */,
+				CE473D21204F25AE004F38EC /* CreateAccountViewController.swift */,
+				CE473CE5204E51F9004F38EC /* LoginViewController.swift */,
+				CE473CD9204E40D4004F38EC /* HomeTableViewController.swift */,
+				CE473CDB204E40E6004F38EC /* TShirtTableViewController.swift */,
+				CE473CDD204E40F3004F38EC /* OuterwearTableViewController.swift */,
+				CE473CDF204E4111004F38EC /* AccessoriesTableViewController.swift */,
+				CE473CE1204E4133004F38EC /* ShoppingCartTableViewController.swift */,
+				CE473CE3204E4A26004F38EC /* LogoTableViewCell.swift */,
 				CE774C7E204B2DAE00A1BD2B /* Assets.xcassets */,
 				CE774C80204B2DAE00A1BD2B /* LaunchScreen.storyboard */,
 				CE774C83204B2DAE00A1BD2B /* Info.plist */,
+				CE774CB5204B359100A1BD2B /* cart.png */,
+				CE774CC3204B36E400A1BD2B /* shape (1).png */,
+				CE774CB7204B359400A1BD2B /* hat.png */,
+				CE774CBF204B360B00A1BD2B /* home (4).png */,
+				CE774CBB204B359B00A1BD2B /* hoodie.png */,
+				CE774CC5204B39B800A1BD2B /* bad-ink box black.png */,
+				CE473CCF204B4C48004F38EC /* newBackground.png */,
 			);
 			path = "bad-ink";
 			sourceTree = "<group>";
@@ -125,6 +197,16 @@
 			path = "bad-inkUITests";
 			sourceTree = "<group>";
 		};
+		DCA8CB1EB4B6B00D71FEA704 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27F478EC0DBF861D6DAD399C /* Pods_bad_ink.framework */,
+				19E15704D7A250ABD235F1E1 /* Pods_bad_inkTests.framework */,
+				72F314B7C322981422AC59C4 /* Pods_bad_inkUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE774C9C204B2DAE00A1BD2B /* Build configuration list for PBXNativeTarget "bad-ink" */;
 			buildPhases = (
+				7F1AA88FB8C3EAE25489E608 /* [CP] Check Pods Manifest.lock */,
 				CE774C70204B2DAE00A1BD2B /* Sources */,
 				CE774C71204B2DAE00A1BD2B /* Frameworks */,
 				CE774C72204B2DAE00A1BD2B /* Resources */,
+				F8FF916163F1A1E965DB3E73 /* [CP] Embed Pods Frameworks */,
+				94FC5621EEFC821EA628E014 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE774C9F204B2DAE00A1BD2B /* Build configuration list for PBXNativeTarget "bad-inkTests" */;
 			buildPhases = (
+				3FFE226E55E8F75E9E3BD2C7 /* [CP] Check Pods Manifest.lock */,
 				CE774C84204B2DAE00A1BD2B /* Sources */,
 				CE774C85204B2DAE00A1BD2B /* Frameworks */,
 				CE774C86204B2DAE00A1BD2B /* Resources */,
+				D6D34CEF81AC49E271827A59 /* [CP] Embed Pods Frameworks */,
+				9FCFFEF85AEF1B4CC0E98E23 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE774CA2204B2DAE00A1BD2B /* Build configuration list for PBXNativeTarget "bad-inkUITests" */;
 			buildPhases = (
+				71C0A6289576711FA0EE3C59 /* [CP] Check Pods Manifest.lock */,
 				CE774C8F204B2DAE00A1BD2B /* Sources */,
 				CE774C90204B2DAE00A1BD2B /* Frameworks */,
 				CE774C91204B2DAE00A1BD2B /* Resources */,
+				4FC3CBCDBAA8B0EA3AA1783C /* [CP] Embed Pods Frameworks */,
+				9142FB2115F28EEAE0E4E45D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,9 +323,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE473CD0204B4C48004F38EC /* newBackground.png in Resources */,
 				CE774C82204B2DAE00A1BD2B /* LaunchScreen.storyboard in Resources */,
+				CE774CB6204B359100A1BD2B /* cart.png in Resources */,
 				CE774C7F204B2DAE00A1BD2B /* Assets.xcassets in Resources */,
+				CE774CC4204B36E400A1BD2B /* shape (1).png in Resources */,
+				CE774CB8204B359400A1BD2B /* hat.png in Resources */,
+				CE774CBC204B359B00A1BD2B /* hoodie.png in Resources */,
+				CE774CC0204B360C00A1BD2B /* home (4).png in Resources */,
 				CE774C7D204B2DAE00A1BD2B /* Main.storyboard in Resources */,
+				CE774CC6204B39B900A1BD2B /* bad-ink box black.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +352,180 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3FFE226E55E8F75E9E3BD2C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bad-inkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FC3CBCDBAA8B0EA3AA1783C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bad-inkUITests/Pods-bad-inkUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71C0A6289576711FA0EE3C59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bad-inkUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F1AA88FB8C3EAE25489E608 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bad-ink-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9142FB2115F28EEAE0E4E45D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bad-inkUITests/Pods-bad-inkUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94FC5621EEFC821EA628E014 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bad-ink/Pods-bad-ink-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FCFFEF85AEF1B4CC0E98E23 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bad-inkTests/Pods-bad-inkTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6D34CEF81AC49E271827A59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bad-inkTests/Pods-bad-inkTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8FF916163F1A1E965DB3E73 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-bad-ink/Pods-bad-ink-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bad-ink/Pods-bad-ink-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE774C70204B2DAE00A1BD2B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE774C7A204B2DAE00A1BD2B /* ViewController.swift in Sources */,
-				CE774C78204B2DAE00A1BD2B /* AppDelegate.swift in Sources */,
+				CE473CE4204E4A26004F38EC /* LogoTableViewCell.swift in Sources */,
+				CE473CDA204E40D4004F38EC /* HomeTableViewController.swift in Sources */,
+				CE473CDC204E40E6004F38EC /* TShirtTableViewController.swift in Sources */,
+				CE4C7619204F5EC500F78149 /* AppDelegate.swift in Sources */,
+				CE473CDE204E40F3004F38EC /* OuterwearTableViewController.swift in Sources */,
+				CE473CE6204E51F9004F38EC /* LoginViewController.swift in Sources */,
+				CE473CE0204E4111004F38EC /* AccessoriesTableViewController.swift in Sources */,
+				CE473D22204F25AE004F38EC /* CreateAccountViewController.swift in Sources */,
+				CE473CE2204E4133004F38EC /* ShoppingCartTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +689,7 @@
 		};
 		CE774C9D204B2DAE00A1BD2B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 223C92F371D20B32D94139AC /* Pods-bad-ink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -438,6 +704,7 @@
 		};
 		CE774C9E204B2DAE00A1BD2B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60BD7B8A8972680E9AB20AF4 /* Pods-bad-ink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +719,7 @@
 		};
 		CE774CA0204B2DAE00A1BD2B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 343F4F8965B9EA195E5E055A /* Pods-bad-inkTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +736,7 @@
 		};
 		CE774CA1204B2DAE00A1BD2B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA7F19BD013D3804CA8AEF0F /* Pods-bad-inkTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +753,7 @@
 		};
 		CE774CA3204B2DAE00A1BD2B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF3C8C4576396D26D4ADF61E /* Pods-bad-inkUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +769,7 @@
 		};
 		CE774CA4204B2DAE00A1BD2B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12A2A01C20FCD3509AFF21E9 /* Pods-bad-inkUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
