@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CreateAccountViewController: UIViewController, UITextFieldDelegate {
 
@@ -15,7 +16,8 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameTxtField: UITextField!
     @IBOutlet weak var passwordTxtField: UITextField!
     @IBOutlet weak var confirmPasswordTxtField: UITextField!
-    
+    var ref : DatabaseReference?
+    var key : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,8 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         usernameTxtField.delegate = self
         passwordTxtField.delegate = self
         confirmPasswordTxtField.delegate = self
+        
+        ref = Database.database().reference().child("users");
         // Do any additional setup after loading the view.
     }
 
@@ -50,7 +54,45 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         
         return true
     }
+    
+    @IBAction func CreateAccountButton(_ sender: Any) {
+        addUser()
+    }
 
+    func addUser() {
+        /*ref = Database.database().reference().child("Users")
+        
+        ref?.child(key!).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            var username = value?["username"] as? String ?? ""
+            let first_name = value?["first_name"] as? String ?? ""
+            let last_name = value?["last_name"] as? String ?? ""
+            let password = value?["password"] as? String ?? ""
+            
+            if username != self.usernameTxtField.text{
+                let user = ["username": self.usernameTxtField.text,
+                            "first name": self.firstNameTxtField.text,
+                            "last name": self.lastNameTxtField.text,
+                            "password": self.passwordTxtField.text, ]
+                
+                //adding the artist inside the generated unique key
+                self.ref?.child(self.usernameTxtField.text!).setValue(user)
+            }
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }*/
+        
+        let user = ["username": self.usernameTxtField.text,
+                    "first name": self.firstNameTxtField.text,
+                    "last name": self.lastNameTxtField.text,
+                    "password": self.passwordTxtField.text, ]
+        
+        //adding the artist inside the generated unique key
+        self.ref?.child(self.usernameTxtField.text!).setValue(user)
+    }
+    
     /*
     // MARK: - Navigation
 

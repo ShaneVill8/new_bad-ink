@@ -25,12 +25,9 @@
 		CE774C82204B2DAE00A1BD2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE774C80204B2DAE00A1BD2B /* LaunchScreen.storyboard */; };
 		CE774C8D204B2DAE00A1BD2B /* bad_inkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE774C8C204B2DAE00A1BD2B /* bad_inkTests.swift */; };
 		CE774C98204B2DAE00A1BD2B /* bad_inkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE774C97204B2DAE00A1BD2B /* bad_inkUITests.swift */; };
-		CE774CB6204B359100A1BD2B /* cart.png in Resources */ = {isa = PBXBuildFile; fileRef = CE774CB5204B359100A1BD2B /* cart.png */; };
-		CE774CB8204B359400A1BD2B /* hat.png in Resources */ = {isa = PBXBuildFile; fileRef = CE774CB7204B359400A1BD2B /* hat.png */; };
-		CE774CBC204B359B00A1BD2B /* hoodie.png in Resources */ = {isa = PBXBuildFile; fileRef = CE774CBB204B359B00A1BD2B /* hoodie.png */; };
-		CE774CC0204B360C00A1BD2B /* home (4).png in Resources */ = {isa = PBXBuildFile; fileRef = CE774CBF204B360B00A1BD2B /* home (4).png */; };
-		CE774CC4204B36E400A1BD2B /* shape (1).png in Resources */ = {isa = PBXBuildFile; fileRef = CE774CC3204B36E400A1BD2B /* shape (1).png */; };
 		CE774CC6204B39B900A1BD2B /* bad-ink box black.png in Resources */ = {isa = PBXBuildFile; fileRef = CE774CC5204B39B800A1BD2B /* bad-ink box black.png */; };
+		CEB2937B2050D3870049EF4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEB2937A2050D3870049EF4E /* GoogleService-Info.plist */; };
+		CEB2937D2050D7E10049EF4E /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2937C2050D7E10049EF4E /* Users.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,12 +77,9 @@
 		CE774C93204B2DAE00A1BD2B /* bad-inkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bad-inkUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE774C97204B2DAE00A1BD2B /* bad_inkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bad_inkUITests.swift; sourceTree = "<group>"; };
 		CE774C99204B2DAE00A1BD2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE774CB5204B359100A1BD2B /* cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart.png; sourceTree = "<group>"; };
-		CE774CB7204B359400A1BD2B /* hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hat.png; sourceTree = "<group>"; };
-		CE774CBB204B359B00A1BD2B /* hoodie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hoodie.png; sourceTree = "<group>"; };
-		CE774CBF204B360B00A1BD2B /* home (4).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home (4).png"; sourceTree = "<group>"; };
-		CE774CC3204B36E400A1BD2B /* shape (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shape (1).png"; sourceTree = "<group>"; };
 		CE774CC5204B39B800A1BD2B /* bad-ink box black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bad-ink box black.png"; sourceTree = "<group>"; };
+		CEB2937A2050D3870049EF4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CEB2937C2050D7E10049EF4E /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		FF3C8C4576396D26D4ADF61E /* Pods-bad-inkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bad-inkUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bad-inkUITests/Pods-bad-inkUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +152,7 @@
 				CE774C7B204B2DAE00A1BD2B /* Main.storyboard */,
 				CE4C7618204F5EC500F78149 /* AppDelegate.swift */,
 				CE473D21204F25AE004F38EC /* CreateAccountViewController.swift */,
+				CEB2937C2050D7E10049EF4E /* Users.swift */,
 				CE473CE5204E51F9004F38EC /* LoginViewController.swift */,
 				CE473CD9204E40D4004F38EC /* HomeTableViewController.swift */,
 				CE473CDB204E40E6004F38EC /* TShirtTableViewController.swift */,
@@ -168,13 +163,9 @@
 				CE774C7E204B2DAE00A1BD2B /* Assets.xcassets */,
 				CE774C80204B2DAE00A1BD2B /* LaunchScreen.storyboard */,
 				CE774C83204B2DAE00A1BD2B /* Info.plist */,
-				CE774CB5204B359100A1BD2B /* cart.png */,
-				CE774CC3204B36E400A1BD2B /* shape (1).png */,
-				CE774CB7204B359400A1BD2B /* hat.png */,
-				CE774CBF204B360B00A1BD2B /* home (4).png */,
-				CE774CBB204B359B00A1BD2B /* hoodie.png */,
 				CE774CC5204B39B800A1BD2B /* bad-ink box black.png */,
 				CE473CCF204B4C48004F38EC /* newBackground.png */,
+				CEB2937A2050D3870049EF4E /* GoogleService-Info.plist */,
 			);
 			path = "bad-ink";
 			sourceTree = "<group>";
@@ -325,14 +316,10 @@
 			files = (
 				CE473CD0204B4C48004F38EC /* newBackground.png in Resources */,
 				CE774C82204B2DAE00A1BD2B /* LaunchScreen.storyboard in Resources */,
-				CE774CB6204B359100A1BD2B /* cart.png in Resources */,
 				CE774C7F204B2DAE00A1BD2B /* Assets.xcassets in Resources */,
-				CE774CC4204B36E400A1BD2B /* shape (1).png in Resources */,
-				CE774CB8204B359400A1BD2B /* hat.png in Resources */,
-				CE774CBC204B359B00A1BD2B /* hoodie.png in Resources */,
-				CE774CC0204B360C00A1BD2B /* home (4).png in Resources */,
 				CE774C7D204B2DAE00A1BD2B /* Main.storyboard in Resources */,
 				CE774CC6204B39B900A1BD2B /* bad-ink box black.png in Resources */,
+				CEB2937B2050D3870049EF4E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +506,7 @@
 			files = (
 				CE473CE4204E4A26004F38EC /* LogoTableViewCell.swift in Sources */,
 				CE473CDA204E40D4004F38EC /* HomeTableViewController.swift in Sources */,
+				CEB2937D2050D7E10049EF4E /* Users.swift in Sources */,
 				CE473CDC204E40E6004F38EC /* TShirtTableViewController.swift in Sources */,
 				CE4C7619204F5EC500F78149 /* AppDelegate.swift in Sources */,
 				CE473CDE204E40F3004F38EC /* OuterwearTableViewController.swift in Sources */,
