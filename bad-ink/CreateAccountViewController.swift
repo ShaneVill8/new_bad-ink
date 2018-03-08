@@ -91,6 +91,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         
         //adding the artist inside the generated unique key
         self.ref?.child(self.usernameTxtField.text!).setValue(user)
+        /////
     }
     
     /*
