@@ -10,7 +10,9 @@ import UIKit
 import Firebase
 
 class CreateAccountViewController: UIViewController, UITextFieldDelegate {
-
+    
+    @IBOutlet weak var BlankLabel: UILabel!
+    @IBOutlet weak var UsernameNotAvailable: UILabel!
     @IBOutlet weak var firstNameTxtField: UITextField!
     @IBOutlet weak var lastNameTxtField: UITextField!
     @IBOutlet weak var usernameTxtField: UITextField!
@@ -21,6 +23,10 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UsernameNotAvailable.isHidden = true
+        BlankLabel.isHidden = true
+        
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "newBackground.png")!)
         firstNameTxtField.delegate = self
         lastNameTxtField.delegate = self
@@ -56,42 +62,36 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func CreateAccountButton(_ sender: Any) {
-        addUser()
+        if usernameTxtField.text != "" && firstNameTxtField.text != "" && lastNameTxtField.text != "" && passwordTxtField.text != "" && confirmPasswordTxtField.text != "" {
+            addUser()
+        }
+        else{
+            self.BlankLabel.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                self.BlankLabel.isHidden = true
+            }
+        }
     }
 
     func addUser() {
-        /*ref = Database.database().reference().child("Users")
-        
-        ref?.child(key!).observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            let value = snapshot.value as? NSDictionary
-            var username = value?["username"] as? String ?? ""
-            let first_name = value?["first_name"] as? String ?? ""
-            let last_name = value?["last_name"] as? String ?? ""
-            let password = value?["password"] as? String ?? ""
-            
-            if username != self.usernameTxtField.text{
-                let user = ["username": self.usernameTxtField.text,
-                            "first name": self.firstNameTxtField.text,
-                            "last name": self.lastNameTxtField.text,
-                            "password": self.passwordTxtField.text, ]
-                
-                //adding the artist inside the generated unique key
-                self.ref?.child(self.usernameTxtField.text!).setValue(user)
-            }
-            
-        }) { (error) in
-            print(error.localizedDescription)
-        }*/
-        
+        ref = Database.database().reference().child("users")
         let user = ["username": self.usernameTxtField.text,
                     "first name": self.firstNameTxtField.text,
                     "last name": self.lastNameTxtField.text,
                     "password": self.passwordTxtField.text, ]
         
-        //adding the artist inside the generated unique key
         self.ref?.child(self.usernameTxtField.text!).setValue(user)
-        /////trying to commit
+        
+        self.UsernameNotAvailable.isHidden = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+            self.UsernameNotAvailable.isHidden = true
+        }
+        
+        usernameTxtField.text = ""
+        firstNameTxtField.text = ""
+        lastNameTxtField.text = ""
+        passwordTxtField.text = ""
+        confirmPasswordTxtField.text = ""
     }
     
     /*

@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
-    
+   
+    @IBOutlet weak var InvalidLabel: UILabel!
     @IBOutlet weak var usernameTxtField: UITextField!
     @IBOutlet weak var passwordTxtField: UITextField!
+    @IBOutlet weak var BlankLabel: UILabel!
+    var ref : DatabaseReference?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        BlankLabel.isHidden = true
+        InvalidLabel.isHidden = true
+        
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "newBackground.png")!)
         usernameTxtField.delegate = self
         passwordTxtField.delegate = self
@@ -37,6 +45,51 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
        
         return true
     }
+    
+    @IBAction func loginButton(_ sender: Any) {
+        if usernameTxtField.text != "" && passwordTxtField.text != "" {
+            login()
+        }
+        else{
+            self.BlankLabel.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                self.BlankLabel.isHidden = true
+            }
+        }
+    }
+
+    func login() {
+        ref = Database.database().reference().child("users")
+        
+        ref?.child(usernameTxtField.text!).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            let password = value?["password"] as? String ?? ""
+            let textfield = String(self.passwordTxtField.text!)
+            
+            if password == textfield{
+                print("here") ///segue back to home
+            }
+            else{
+                self.InvalidLabel.isHidden = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                    self.InvalidLabel.isHidden = true
+                }
+                self.usernameTxtField.text = ""
+                self.passwordTxtField.text = ""
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+        
+        //DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
+        //    self.UsernameNotAvailable.isHidden = false
+        //}
+        
+        //DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+        //    self.UsernameNotAvailable.isHidden = true
+        //}
 
     /*
     // MARK: - Navigation
