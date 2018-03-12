@@ -52,7 +52,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         else{
             self.BlankLabel.isHidden = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
                 self.BlankLabel.isHidden = true
             }
         }
@@ -72,7 +72,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
             else{
                 self.InvalidLabel.isHidden = false
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
                     self.InvalidLabel.isHidden = true
                 }
                 self.usernameTxtField.text = ""

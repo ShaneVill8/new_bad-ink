@@ -11,6 +11,9 @@ import Firebase
 
 class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var verifypwLabel: UILabel!
+    @IBOutlet weak var emailTxtField: UITextField!
+    @IBOutlet weak var accountCreateLabel: UILabel!
     @IBOutlet weak var BlankLabel: UILabel!
     @IBOutlet weak var UsernameNotAvailable: UILabel!
     @IBOutlet weak var firstNameTxtField: UITextField!
@@ -26,6 +29,8 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         
         UsernameNotAvailable.isHidden = true
         BlankLabel.isHidden = true
+        accountCreateLabel.isHidden = true
+        verifypwLabel.isHidden = true
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "newBackground.png")!)
         firstNameTxtField.delegate = self
@@ -33,6 +38,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         usernameTxtField.delegate = self
         passwordTxtField.delegate = self
         confirmPasswordTxtField.delegate = self
+        emailTxtField.delegate = self
         
         ref = Database.database().reference().child("users");
         // Do any additional setup after loading the view.
@@ -49,6 +55,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         usernameTxtField.resignFirstResponder()
         passwordTxtField.resignFirstResponder()
         confirmPasswordTxtField.resignFirstResponder()
+        emailTxtField.resignFirstResponder()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -57,17 +64,18 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         usernameTxtField.resignFirstResponder()
         passwordTxtField.resignFirstResponder()
         confirmPasswordTxtField.resignFirstResponder()
+        emailTxtField.resignFirstResponder()
         
         return true
     }
     
     @IBAction func CreateAccountButton(_ sender: Any) {
-        if usernameTxtField.text != "" && firstNameTxtField.text != "" && lastNameTxtField.text != "" && passwordTxtField.text != "" && confirmPasswordTxtField.text != "" {
+        if usernameTxtField.text != "" && firstNameTxtField.text != "" && lastNameTxtField.text != "" && passwordTxtField.text != "" && confirmPasswordTxtField.text != "" && emailTxtField.text != "" {
             addUser()
         }
         else{
             self.BlankLabel.isHidden = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
                 self.BlankLabel.isHidden = true
             }
         }
@@ -75,23 +83,48 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
 
     func addUser() {
         ref = Database.database().reference().child("users")
-        let user = ["username": self.usernameTxtField.text,
-                    "first name": self.firstNameTxtField.text,
-                    "last name": self.lastNameTxtField.text,
-                    "password": self.passwordTxtField.text, ]
-        
-        self.ref?.child(self.usernameTxtField.text!).setValue(user)
-        
-        self.UsernameNotAvailable.isHidden = false
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-            self.UsernameNotAvailable.isHidden = true
+        if confirmPasswordTxtField.text == passwordTxtField.text{
+            ref?.child(usernameTxtField.text!).observeSingleEvent(of: .value, with: { (snapshot) in
+                // Get user value
+                let value = snapshot.value as? NSDictionary
+                let username = value?["username"] as? String ?? ""
+                let textfield = String(self.usernameTxtField.text!)
+                
+                if username == textfield{
+                    self.UsernameNotAvailable.isHidden = false
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+                        self.UsernameNotAvailable.isHidden = true
+                    }
+                }
+                else{
+                    let user = ["username": self.usernameTxtField.text,
+                                "first name": self.firstNameTxtField.text,
+                                "last name": self.lastNameTxtField.text,
+                                "password": self.passwordTxtField.text,
+                                "email": self.emailTxtField.text, ]
+                    
+                    self.ref?.child(self.usernameTxtField.text!).setValue(user)
+                    
+                    self.accountCreateLabel.isHidden = false
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+                        self.accountCreateLabel.isHidden = true
+                    }
+                    self.usernameTxtField.text = ""
+                    self.firstNameTxtField.text = ""
+                    self.lastNameTxtField.text = ""
+                    self.passwordTxtField.text = ""
+                    self.confirmPasswordTxtField.text = ""
+                    self.emailTxtField.text = ""
+                }
+            })
+        }else{
+            self.verifypwLabel.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+                self.verifypwLabel.isHidden = true
+            }
+            self.passwordTxtField.text = ""
+            self.confirmPasswordTxtField.text = ""
         }
-        
-        usernameTxtField.text = ""
-        firstNameTxtField.text = ""
-        lastNameTxtField.text = ""
-        passwordTxtField.text = ""
-        confirmPasswordTxtField.text = ""
     }
     
     /*
