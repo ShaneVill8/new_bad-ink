@@ -12,8 +12,17 @@ class ProductViewController: UIViewController {
 
     var dataFromPrev : product!
     
+    @IBOutlet var name: UILabel!
+    @IBOutlet var price: UILabel!
+    @IBOutlet var cartButton: UIButton!
+    @IBOutlet var picture: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        picture.image = dataFromPrev.image
+        name.text = dataFromPrev.name
+        price.text = "$" + String(dataFromPrev.cost)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "newBackground.png")!)
 
         // Do any additional setup after loading the view.
     }
@@ -21,6 +30,9 @@ class ProductViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func addToCart(_ sender: Any) {
+        shoppingCart.append(dataFromPrev)
     }
     
 

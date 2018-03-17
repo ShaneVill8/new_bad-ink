@@ -8,8 +8,12 @@
 
 import UIKit
 
+var shoppingCart = [product]()
+
 class ShoppingCartTableViewController: UITableViewController {
 
+    @IBOutlet var checkOut: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "newBackground.png")!)
@@ -24,28 +28,36 @@ class ShoppingCartTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    @IBAction func proceedToCheckout(_ sender: Any) {
+        // Segue to checkout so they can pay for items
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return shoppingCart.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "shoppingCell", for: indexPath) as! ProductTableViewCell
+        let this_product = shoppingCart[indexPath.row]
+        let this_price = "$"
+        cell.picture.image = this_product.image
+        cell.name.text = this_product.name
+        cell.price.text = this_price + String(this_product.cost)
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
