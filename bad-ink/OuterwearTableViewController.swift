@@ -10,8 +10,13 @@ import UIKit
 
 class OuterwearTableViewController: UITableViewController {
 
+    var products = [product]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        products.append(product(name: "bad-ink White Hooded Sweatshirt", image: #imageLiteral(resourceName: "hoodie"), cost: 24.95))
+        products.append(product(name: "bad-ink Long-Sleeve Shirt", image: #imageLiteral(resourceName: "longSleeve"), cost: 19.95))
+        products.append(product(name: "bad-ink Colored Hooded Sweatshirt", image: #imageLiteral(resourceName: "bluehoodie"), cost: 24.95))
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "newBackground.png")!)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,23 +34,27 @@ class OuterwearTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return products.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "outerCell", for: indexPath) as! ProductTableViewCell
+        let this_product = products[indexPath.row]
+        cell.name.text = this_product.name
+        cell.picture.image = this_product.image
+        cell.price.text = "$" + String(this_product.cost)
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

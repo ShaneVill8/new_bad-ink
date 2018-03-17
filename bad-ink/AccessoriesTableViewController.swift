@@ -10,8 +10,13 @@ import UIKit
 
 class AccessoriesTableViewController: UITableViewController {
 
+    var products = [product]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        products.append(product(name: "bad-ink White Hat", image: #imageLiteral(resourceName: "hat"), cost: 19.95))
+        products.append(product(name: "bad-ink Sticker", image: #imageLiteral(resourceName: "genSticker"), cost: 4.95))
+        products.append(product(name: "bad-ink Sticker", image: #imageLiteral(resourceName: "socks"), cost: 9.95))
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "newBackground.png")!)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,23 +34,26 @@ class AccessoriesTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return products.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "otherCell", for: indexPath) as! ProductTableViewCell
+        let this_product = products[indexPath.row]
+        cell.name.text = this_product.name
+        cell.picture.image = this_product.image
+        cell.price.text = "$" + String(this_product.cost)
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -10,8 +10,13 @@ import UIKit
 
 class TShirtTableViewController: UITableViewController {
 
+    var products = [product]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        products.append(product(name: "bad-ink white T-shirt", image: #imageLiteral(resourceName: "shape (1)"), cost: 14.95))
+        products.append(product(name: "bad-ink blue T-shirt", image: #imageLiteral(resourceName: "tshirt1"), cost: 14.95))
+        products.append(product(name: "bad-ink pink T-shirt", image: #imageLiteral(resourceName: "tshirt2"), cost: 14.95))
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "newBackground.png")!)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,23 +34,25 @@ class TShirtTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return products.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myProductTableViewCell", for: indexPath) as! ProductTableViewCell
+        let this_product = products[indexPath.row]
+        let this_price = "$"
+        cell.picture.image = this_product.image
+        cell.name.text = this_product.name
+        cell.price.text = this_price + String(this_product.cost)
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.
@@ -82,14 +89,20 @@ class TShirtTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
+        if segue.identifier == "segToLarge" {
+            let destVC = segue.destination as? ProductViewController
+            let selectedIndexPath = tableView.indexPathForSelectedRow
+            destVC?.dataFromPrev = products[(selectedIndexPath?.row)!]
+        }
+    }*/
+    
 
 }
