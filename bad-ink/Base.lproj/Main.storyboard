@@ -382,30 +382,6 @@
                                     <action selector="CreateAccountButton:" destination="fvE-WR-uJb" eventType="touchUpInside" id="RZU-6O-Fae"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username not available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgj-wG-P3Y">
-                                <rect key="frame" x="98" y="606" width="179" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do not leave Text Fields blank!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzy-q5-h3Y">
-                                <rect key="frame" x="71" y="608" width="236" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account created!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqn-ML-eA8">
-                                <rect key="frame" x="114" y="603" width="147" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please verify your password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIS-B8-6s5">
-                                <rect key="frame" x="80" y="604" width="214" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -413,11 +389,7 @@
                             <constraint firstItem="a6u-HX-Mum" firstAttribute="leading" secondItem="9KI-hG-ZR1" secondAttribute="leading" constant="74" id="29I-yZ-HZF"/>
                             <constraint firstItem="MA5-Qj-47I" firstAttribute="centerX" secondItem="9KI-hG-ZR1" secondAttribute="centerX" id="3R3-Ze-DeB"/>
                             <constraint firstItem="a6u-HX-Mum" firstAttribute="trailing" secondItem="fxo-sO-7Rj" secondAttribute="trailing" constant="-2" id="5KW-5E-evZ"/>
-                            <constraint firstItem="pgj-wG-P3Y" firstAttribute="top" secondItem="L1t-nk-7Qt" secondAttribute="bottom" constant="157" id="7ht-fF-bOj"/>
                             <constraint firstItem="MA5-Qj-47I" firstAttribute="top" secondItem="L1t-nk-7Qt" secondAttribute="bottom" constant="8" symbolic="YES" id="8Kq-5L-KZX"/>
-                            <constraint firstItem="mIS-B8-6s5" firstAttribute="centerX" secondItem="9KI-hG-ZR1" secondAttribute="centerX" id="CCm-5G-FbN"/>
-                            <constraint firstItem="pgj-wG-P3Y" firstAttribute="centerX" secondItem="9KI-hG-ZR1" secondAttribute="centerX" id="Dcf-ab-fmI"/>
-                            <constraint firstItem="Rqn-ML-eA8" firstAttribute="centerX" secondItem="9KI-hG-ZR1" secondAttribute="centerX" id="GMk-zG-xBl"/>
                             <constraint firstItem="5P1-us-FeF" firstAttribute="centerX" secondItem="9KI-hG-ZR1" secondAttribute="centerX" id="HBB-NW-Xdb"/>
                             <constraint firstItem="Snb-Y1-Tk2" firstAttribute="centerX" secondItem="9KI-hG-ZR1" secondAttribute="centerX" id="Hhm-Ii-Qen"/>
                             <constraint firstItem="fxo-sO-7Rj" firstAttribute="leading" secondItem="3wh-hR-Qyl" secondAttribute="leading" constant="2" id="Hks-Z9-GHt"/>
@@ -425,26 +397,17 @@
                             <constraint firstItem="a6u-HX-Mum" firstAttribute="trailing" secondItem="3wh-hR-Qyl" secondAttribute="trailing" id="KDl-bi-yg4"/>
                             <constraint firstItem="4An-AI-Ba2" firstAttribute="top" secondItem="L1t-nk-7Qt" secondAttribute="bottom" constant="101" id="Lkb-0v-BFE"/>
                             <constraint firstItem="L1t-nk-7Qt" firstAttribute="leading" secondItem="5P1-us-FeF" secondAttribute="leading" id="O9E-RF-oQi"/>
-                            <constraint firstItem="4An-AI-Ba2" firstAttribute="top" secondItem="pgj-wG-P3Y" secondAttribute="bottom" constant="-77" id="OIW-ni-msx"/>
                             <constraint firstItem="5P1-us-FeF" firstAttribute="trailing" secondItem="3wh-hR-Qyl" secondAttribute="trailing" id="OKY-OU-KYQ"/>
-                            <constraint firstItem="vzy-q5-h3Y" firstAttribute="top" secondItem="IM7-kM-veV" secondAttribute="top" constant="608" id="RWt-zD-7px"/>
                             <constraint firstItem="4An-AI-Ba2" firstAttribute="trailing" secondItem="L1t-nk-7Qt" secondAttribute="trailing" id="S6O-IN-Kb5"/>
                             <constraint firstItem="L1t-nk-7Qt" firstAttribute="centerX" secondItem="9KI-hG-ZR1" secondAttribute="centerX" id="SjL-5c-hhz"/>
-                            <constraint firstItem="Rqn-ML-eA8" firstAttribute="leading" secondItem="9KI-hG-ZR1" secondAttribute="leading" constant="114" id="Vvf-Bc-Dgt"/>
                             <constraint firstItem="5P1-us-FeF" firstAttribute="top" secondItem="3wh-hR-Qyl" secondAttribute="bottom" constant="8" id="Wg9-Lr-bRO"/>
-                            <constraint firstItem="9KI-hG-ZR1" firstAttribute="bottom" secondItem="vzy-q5-h3Y" secondAttribute="bottom" constant="38" id="Wth-OD-jhm"/>
                             <constraint firstItem="fxo-sO-7Rj" firstAttribute="top" secondItem="a6u-HX-Mum" secondAttribute="bottom" constant="8" id="XEl-Jo-sgB"/>
                             <constraint firstItem="4An-AI-Ba2" firstAttribute="centerX" secondItem="9KI-hG-ZR1" secondAttribute="centerX" id="ZtO-LF-g83"/>
                             <constraint firstItem="a6u-HX-Mum" firstAttribute="top" secondItem="IM7-kM-veV" secondAttribute="top" constant="217" id="c5D-pO-fph"/>
                             <constraint firstItem="Snb-Y1-Tk2" firstAttribute="top" secondItem="9KI-hG-ZR1" secondAttribute="top" constant="31" id="cdB-MR-k5T"/>
                             <constraint firstItem="L1t-nk-7Qt" firstAttribute="trailing" secondItem="5P1-us-FeF" secondAttribute="trailing" id="eGR-tR-DcT"/>
-                            <constraint firstItem="vzy-q5-h3Y" firstAttribute="centerX" secondItem="fxo-sO-7Rj" secondAttribute="centerX" id="eag-JP-ekU"/>
                             <constraint firstItem="a6u-HX-Mum" firstAttribute="top" secondItem="Snb-Y1-Tk2" secondAttribute="bottom" constant="40" id="fgS-mC-Z7A"/>
                             <constraint firstItem="Snb-Y1-Tk2" firstAttribute="leading" secondItem="9KI-hG-ZR1" secondAttribute="leading" constant="91" id="g0e-yo-XzG"/>
-                            <constraint firstItem="vzy-q5-h3Y" firstAttribute="leading" secondItem="9KI-hG-ZR1" secondAttribute="leading" constant="71" id="gJW-4P-xHf"/>
-                            <constraint firstItem="vzy-q5-h3Y" firstAttribute="baseline" secondItem="Rqn-ML-eA8" secondAttribute="baseline" constant="1" id="gUo-ra-TAa"/>
-                            <constraint firstItem="vzy-q5-h3Y" firstAttribute="top" secondItem="4An-AI-Ba2" secondAttribute="bottom" constant="21" id="gzH-w5-IZK"/>
-                            <constraint firstItem="mIS-B8-6s5" firstAttribute="top" secondItem="4An-AI-Ba2" secondAttribute="bottom" constant="17" id="kAJ-00-jsL"/>
                             <constraint firstItem="L1t-nk-7Qt" firstAttribute="top" secondItem="5P1-us-FeF" secondAttribute="bottom" constant="8" id="kMz-Hk-pxn"/>
                             <constraint firstItem="5P1-us-FeF" firstAttribute="leading" secondItem="3wh-hR-Qyl" secondAttribute="leading" id="khT-od-qjp"/>
                             <constraint firstItem="a6u-HX-Mum" firstAttribute="leading" secondItem="fxo-sO-7Rj" secondAttribute="leading" constant="-2" id="nR9-GW-QLh"/>
@@ -457,16 +420,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="67R-m4-lbR"/>
                     <connections>
-                        <outlet property="BlankLabel" destination="vzy-q5-h3Y" id="moR-jH-5Th"/>
-                        <outlet property="UsernameNotAvailable" destination="pgj-wG-P3Y" id="gAU-Jd-IdE"/>
-                        <outlet property="accountCreateLabel" destination="Rqn-ML-eA8" id="jqL-Lg-YIj"/>
                         <outlet property="confirmPasswordTxtField" destination="L1t-nk-7Qt" id="DuP-Va-5Kk"/>
                         <outlet property="emailTxtField" destination="MA5-Qj-47I" id="4L4-kh-Z4E"/>
                         <outlet property="firstNameTxtField" destination="a6u-HX-Mum" id="6JP-j6-Ydk"/>
                         <outlet property="lastNameTxtField" destination="fxo-sO-7Rj" id="Ix9-bY-hSn"/>
                         <outlet property="passwordTxtField" destination="5P1-us-FeF" id="W5I-HE-bAl"/>
                         <outlet property="usernameTxtField" destination="3wh-hR-Qyl" id="lAa-RS-BUm"/>
-                        <outlet property="verifypwLabel" destination="mIS-B8-6s5" id="tsW-0a-8B5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lsZ-vz-iQq" userLabel="First Responder" sceneMemberID="firstResponder"/>

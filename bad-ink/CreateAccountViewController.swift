@@ -8,14 +8,11 @@
 
 import UIKit
 import Firebase
+import UserNotifications
 
 class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var verifypwLabel: UILabel!
     @IBOutlet weak var emailTxtField: UITextField!
-    @IBOutlet weak var accountCreateLabel: UILabel!
-    @IBOutlet weak var BlankLabel: UILabel!
-    @IBOutlet weak var UsernameNotAvailable: UILabel!
     @IBOutlet weak var firstNameTxtField: UITextField!
     @IBOutlet weak var lastNameTxtField: UITextField!
     @IBOutlet weak var usernameTxtField: UITextField!
@@ -27,10 +24,13 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UsernameNotAvailable.isHidden = true
-        BlankLabel.isHidden = true
-        accountCreateLabel.isHidden = true
-        verifypwLabel.isHidden = true
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (success, error) in
+            if error != nil{
+                print("Account was not created")
+            }else{
+                print("Account created")
+            }
+        }
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "newBackground.png")!)
         firstNameTxtField.delegate = self
@@ -43,7 +43,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         ref = Database.database().reference().child("users");
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -74,13 +74,81 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
             addUser()
         }
         else{
-            self.BlankLabel.isHidden = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
-                self.BlankLabel.isHidden = true
+            blankLabel(inSeconds: 0.1) { (success) in
+                if success{
+                    print("Successfully Notified")
+                }
             }
         }
     }
-
+    
+    func timedNotifications(inSeconds: TimeInterval, completion: @escaping (_ Seccess: Bool
+        ) -> ()){
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
+        let content = UNMutableNotificationContent()
+        content.title = "Your account has been created!"
+        let request = UNNotificationRequest(identifier: "customNotification", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request){(error) in
+            if error != nil{
+                completion(false)
+            }
+            else{
+                completion(true)
+            }
+        }
+    }
+    
+    func blankLabel(inSeconds: TimeInterval, completion: @escaping (_ Seccess: Bool
+        ) -> ()){
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
+        let content = UNMutableNotificationContent()
+        content.title = "Blank Textfield"
+        content.subtitle = "Please fill in all textfields"
+        let request = UNNotificationRequest(identifier: "customNotification", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request){(error) in
+            if error != nil{
+                completion(false)
+            }
+            else{
+                completion(true)
+            }
+        }
+    }
+    
+    func verifypw(inSeconds: TimeInterval, completion: @escaping (_ Seccess: Bool
+        ) -> ()){
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
+        let content = UNMutableNotificationContent()
+        content.title = "Passwords do not match"
+        content.subtitle = "Please confirm your password"
+        let request = UNNotificationRequest(identifier: "customNotification", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request){(error) in
+            if error != nil{
+                completion(false)
+            }
+            else{
+                completion(true)
+            }
+        }
+    }
+    
+    func usernameNotAvailable(inSeconds: TimeInterval, completion: @escaping (_ Seccess: Bool
+        ) -> ()){
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
+        let content = UNMutableNotificationContent()
+        content.title = "Username not Available"
+        content.subtitle = "Please choose a different username"
+        let request = UNNotificationRequest(identifier: "customNotification", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request){(error) in
+            if error != nil{
+                completion(false)
+            }
+            else{
+                completion(true)
+            }
+        }
+    }
+    
     func addUser() {
         ref = Database.database().reference().child("users")
         if confirmPasswordTxtField.text == passwordTxtField.text{
@@ -91,9 +159,10 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
                 let textfield = String(self.usernameTxtField.text!)
                 
                 if username == textfield{
-                    self.UsernameNotAvailable.isHidden = false
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
-                        self.UsernameNotAvailable.isHidden = true
+                    self.usernameNotAvailable(inSeconds: 0.1) { (success) in
+                        if success{
+                            print("Successfully Notified")
+                        }
                     }
                 }
                 else{
@@ -105,10 +174,12 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
                     
                     self.ref?.child(self.usernameTxtField.text!).setValue(user)
                     
-                    self.accountCreateLabel.isHidden = false
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
-                        self.accountCreateLabel.isHidden = true
+                    self.timedNotifications(inSeconds: 0.1) { (success) in
+                        if success{
+                            print("Successfully Notified")
+                        }
                     }
+                    
                     self.usernameTxtField.text = ""
                     self.firstNameTxtField.text = ""
                     self.lastNameTxtField.text = ""
@@ -118,9 +189,10 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
                 }
             })
         }else{
-            self.verifypwLabel.isHidden = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
-                self.verifypwLabel.isHidden = true
+            self.verifypw(inSeconds: 0.1) { (success) in
+                if success{
+                    print("Successfully Notified")
+                }
             }
             self.passwordTxtField.text = ""
             self.confirmPasswordTxtField.text = ""
@@ -128,13 +200,14 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
+
